@@ -182,7 +182,11 @@ header nav i{
     padding: 50px;
     color: white;
     background-color: var(--transperant-color);
-    
+    display: flex;
+    justify-content: flex-end;
+}
+.landing .text .content{
+    max-width: 500px;
 }
 .landing .text h2{
 font-size: 32px;
