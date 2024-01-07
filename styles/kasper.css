@@ -8,7 +8,6 @@ ul{
 }
 body{
     font-family: "Open Sans", sans-serif;
-    background-color: black;
 }
 .container{
     padding-left: 15px;
@@ -19,6 +18,7 @@ body{
 /* start variables  */
 :root{
     --main-color:#19c8fa;
+    --transperant-color:rgb(15 116 143 / 70% )
 }
 /* end variables */
 /* Small */
@@ -41,11 +41,18 @@ width: 970px;
 }
 
 /* start header */
+header{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
 header .container{
     display:flex ;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    min-height: 88px;
 }
 header .container::after{
     content: "";
@@ -67,8 +74,35 @@ header .container nav{
     align-items: center;
     justify-content: flex-end;
 }
+header .container nav i{
+    color: white;
+    font-size: 22px;
+}
+@media(min-width:768px){
+    header .container nav i{
+        display: none;
+    }
+}
 header .container nav ul{
     display: flex;
+}
+@media(max-width:767px){
+    header .container nav ul{
+        display: none;
+    }
+    header .container nav i:hover + ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        background-color: black;
+        opacity: 0.5;
+    }
+    header .container nav i:hover + ul a{
+        padding: 15px;
+    }
 }
 
 header .container nav ul li a{
@@ -113,5 +147,52 @@ header .container .form i{
     right: 0;
 }
 
-
+header nav i{
+    color: white;
+    font-size: 22px;
+}
 /* end header */
+
+/* start landing */
+.landing{
+    min-height: 100vh;
+    background-image: url(../images/landing\ \(2\).jpg);
+    background-size: cover;
+    position: relative;
+}
+.landing .overlay{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+.landing .text{
+    position: absolute;
+    top: 50%;
+    left:0;
+    transform:translateY(-50%) ;
+    -webkit-transform:translateY(-50%) ;
+    -moz-transform:translateY(-50%) ;
+    -ms-transform:translateY(-50%) ;
+    -o-transform:translateY(-50%) ;
+    width: 50%;
+    padding: 50px;
+    color: white;
+    background-color: var(--transperant-color);
+    
+}
+.landing .text h2{
+font-size: 32px;
+line-height: 1.5;
+margin-bottom: 20px;
+font-weight: normal;
+
+}
+.landing .text p{
+    font-size: 14px;
+    line-height: 2;
+}
+/* end landing */
