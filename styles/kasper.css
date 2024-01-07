@@ -21,6 +21,56 @@ body{
     --transperant-color:rgb(15 116 143 / 70% )
 }
 /* end variables */
+/* component */
+.section{
+    padding: 100px;
+}
+
+.section .main-heading{
+    text-align: center;
+}
+.section .main-heading h2{
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 70px;
+    position: relative;
+    text-transform: uppercase;
+}
+.section .main-heading h2::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 120px;
+    bottom: -30px;
+    background-color:#333 ;
+}
+.section .main-heading h2::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height:20px;
+    width: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #ddd;
+    bottom: -40px;
+    border: 2px solid #333;
+}
+
+.section .main-heading p{
+    width: 550px;
+    margin: 0 auto 40px;
+    line-height: 2;
+    color: #777;
+}
+
+/* component */
 /* Small */
 @media (min-width: 768px) {
     .container {
@@ -184,6 +234,11 @@ header nav i{
     background-color: var(--transperant-color);
     display: flex;
     justify-content: flex-end;
+}
+@media(max-width:767px){
+    .landing .text{
+        width: 100%;
+    }
 }
 .landing .text .content{
     max-width: 500px;
