@@ -401,3 +401,26 @@ font-weight: normal;
     margin-right: 20px;
 } 
 /* End design */
+
+/* start design */
+.portofolio{
+    padding-top:var(--section-padding) ;
+    padding-bottom:var(--section-padding) ;
+}
+
+.portofolio ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.portofolio ul li{
+    padding: 10px;
+}
+
+.portofolio ul .active{
+    background-color: var(--main-color);
+    color: white;
+}
+/* END design */
