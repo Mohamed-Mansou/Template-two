@@ -18,25 +18,22 @@ body{
 /* start variables  */
 :root{
     --main-color:#19c8fa;
-    --transperant-color:rgb(15 116 143 / 70% )
+    --transperant-color:rgb(15 116 143 / 70% );
+    --section-padding:100px;
 }
 /* end variables */
 /* component */
-.section{
-    padding: 100px;
-}
-
-.section .main-heading{
+.main-heading{
     text-align: center;
 }
-.section .main-heading h2{
+.main-heading h2{
     font-size: 40px;
     font-weight: normal;
     margin-bottom: 70px;
     position: relative;
     text-transform: uppercase;
 }
-.section .main-heading h2::before{
+.main-heading h2::before{
     content: "";
     position: absolute;
     left: 50%;
@@ -46,7 +43,7 @@ body{
     bottom: -30px;
     background-color:#333 ;
 }
-.section .main-heading h2::after{
+.main-heading h2::after{
     content: "";
     position: absolute;
     left: 50%;
@@ -63,7 +60,7 @@ body{
     border: 2px solid #333;
 }
 
-.section .main-heading p{
+.main-heading p{
     width: 550px;
     margin: 0 auto 40px;
     line-height: 2;
@@ -299,3 +296,46 @@ font-weight: normal;
     border-color: var(--main-color);
 }
 /* end landing */
+
+/* start services */
+.services{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+@media(min-width:768px){
+    .services .container .srv-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill ,minmax(450px,1fr));
+        grid-column-gap: 40px;
+        grid-row-gap: 60px;
+    }
+}
+.services .srv-box{
+    display: flex;
+}
+.services .srv-box i{
+    margin-right: 50px;
+}
+@media(max-width:768px){
+    .services .srv-box{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .services .srv-box i{
+        margin: 0 0 30px;
+    }
+    .services .srv-box p{
+        margin-bottom: 40px;
+    }
+}
+.services .srv-box h3{
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+.services .srv-box p{
+    color: #777;
+    line-height: 2;
+}
+/* End services */
+
