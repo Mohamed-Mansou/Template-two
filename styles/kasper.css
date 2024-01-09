@@ -543,3 +543,17 @@ font-weight: normal;
     padding: 10px 20px;
 }
 /* End video */
+
+/* start about section*/
+.about{
+    padding-top: var(--section-padding); 
+    position: relative;
+    overflow: hidden;
+}
+
+.about .image{
+    position: relative;
+    bottom: -120px;
+    margin-top: -100px;
+}
+/* end about section */
